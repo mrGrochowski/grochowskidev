@@ -1,6 +1,6 @@
-title: Wavelength Music Streaming Service
-description: Designed and developed the user interface for an indie music streaming service, focusing on discovery features and creating a unique, engaging listening experience using custom audio visualizations.
-image: https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80 # Example image related to music/audio
-url: "#"
-tags: ["UI Design", "Front-End Dev", "Animation"]
-date: "2023"
+title: Tatolista
+description: A community-driven platform for parents to curate safe, engaging, and educational videos for boys aged 6-12. No violence, no boredom—just high-quality music and films. Features a voting system to promote top content from a waiting room to the main "Tatolista" based on a 90% approval rate.
+image: /tatolista.jpg
+url: "https://tatolista.online"
+tags: ["UI Design", "Front-End Dev", "Community"]
+date: "2025"

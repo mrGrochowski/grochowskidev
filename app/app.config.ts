@@ -1,11 +1,11 @@
 export default defineAppConfig({
   global: {
     picture: {
-      dark: 'https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      light: 'https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      dark: 'https://secure.gravatar.com/avatar/fe6cdb120a3f64222f15e7d252d6b354',
+      light: 'https://secure.gravatar.com/avatar/fe6cdb120a3f64222f15e7d252d6b354',
       alt: 'My profile picture'
     },
-    meetingLink: 'https://cal.com/',
+    meetingLink: 'https://cal.com/mateusz.grochowski/30min',
     email: 'mateusz.grochowski1992@gmail.com',
     available: true
   },
@@ -26,16 +26,6 @@ export default defineAppConfig({
     credits: `Built by Mateusz Grochowski • © ${new Date().getFullYear()}`,
     colorMode: false,
     links: [{
-      'icon': 'i-simple-icons-discord',
-      'to': 'https://go.nuxt.com/discord',
-      'target': '_blank',
-      'aria-label': 'Nuxt on Discord'
-    }, {
-      'icon': 'i-simple-icons-x',
-      'to': 'https://go.nuxt.com/x',
-      'target': '_blank',
-      'aria-label': 'Nuxt on X'
-    }, {
       'icon': 'i-simple-icons-github',
       'to': 'https://github.com/mrGrochowski',
       'target': '_blank',
