@@ -1,12 +1,12 @@
 seo:
-  title: "Emma Thompson - UX/UI Designer"
-  description: "Welcome to my portfolio! I'm Emma Thompson, a UX/UI designer and front-end developer based in Boston. I specialize in creating user-centered digital experiences that are both beautiful and functional."
-title: "Hey, I'm Emma Thompson UX/UI Designer"
-description: "I craft intuitive digital experiences where design meets functionality. Based in Boston, bringing ideas to life through code and creativity."
+  title: "Mateusz Grochowski - Frontend Developer"
+  description: "I'm Mateusz Grochowski, a Frontend Developer with 8 years of experience specializing in Nuxt, Node.js, Medusa.js, and Supabase."
+title: "Hey, I'm Mateusz Grochowski"
+description: "8 years of experience in crafting high-performance websites and e-commerce solutions using Nuxt, Node.js (Medusa.js), and Supabase."
 hero:
   links:
-    - label: "Use this template"
-      to: https://github.com/nuxt-ui-templates/portfolio
+    - label: "GitHub"
+      to: https://github.com/mrGrochowski
       color: "neutral"
   images:
     - src: /hero/random-1.avif
@@ -30,8 +30,8 @@ hero:
 about:
   title: "About Me"
   description: |
-    As a UX/UI designer and front-end developer with 6 years of experience, I leverage my Boston University Interactive Design degree to craft user-centered digital experiences.
-    My approach blends creative strategy with technical expertise, transforming concepts into functional, purposeful digital products that seamlessly integrate design and technology.
+    Frontend Developer with 8 years of experience specializing in Nuxt.js. I provide comprehensive web development services, focusing on modern, fast, and scalable solutions.
+    Expert in e-commerce using Medusa.js and Node.js, as well as building robust backends with Supabase. I turn complex requirements into elegant, high-performance digital products.
 experience:
   title: Work Experience
   items:
