@@ -1,101 +1,65 @@
-seo:
-  title: "Mateusz Grochowski - Frontend Developer"
-  description: "I'm Mateusz Grochowski, a Frontend Developer with 8 years of experience specializing in Nuxt, Node.js, Medusa.js, and Supabase."
-title: "Hey, I'm Mateusz Grochowski"
-description: "8 years of experience in crafting high-performance websites and e-commerce solutions using Nuxt, Node.js (Medusa.js), and Supabase."
-hero:
-  links:
-    - label: "GitHub"
-      to: https://github.com/mrGrochowski
-      color: "neutral"
-  images:
-    - src: /mm-event.jpg
-      alt: Random Image 1
-    - src: /hero/random-2.avif
-      alt: Random Image 2
-    - src: /hero/random-3.avif
-      alt: Random Image 3
-    - src: /hero/random-4.avif
-      alt: Random Image 4
-    - src: /hero/random-5.avif
-      alt: Random Image 5
-    - src: /hero/random-6.avif
-      alt: Random Image 6
-    - src: /hero/random-7.avif
-      alt: Random Image 7
-    - src: /hero/random-8.avif
-      alt: Random Image 8
-    - src: /hero/random-9.avif
-      alt: Random Image 9
+title: Hey, I'm Mateusz Grochowski
 about:
-  title: "About Me"
+  title: About Me
   description: |
     Frontend Developer with 8 years of experience specializing in Nuxt.js. I provide comprehensive web development services, focusing on modern, fast, and scalable solutions.
     Expert in e-commerce using Medusa.js and Node.js, as well as building robust backends with Supabase. I turn complex requirements into elegant, high-performance digital products.
+blog:
+  title: Latest Articles
+  description: Some of my recent thoughts
+description: 8 years of experience in crafting high-performance websites and e-commerce solutions using Nuxt, Node.js (Medusa.js), and Supabase.
 experience:
   title: Work Experience
   items:
-    - position: "Mid Dev"
-      date: "2023 - present"
+    - position: Mid Dev
+      date: 2023 - present
       company:
         name: Oferteo S.A.
-        logo: "i-simple-icons-vuedotjs"
-        url: "https://oferteo.pl"
+        logo: i-simple-icons-vuedotjs
+        url: https://oferteo.pl
         color: "#4FC08D"
-    - position: "Senior Dev"
-      date: "2022 - 2023"
+    - position: Senior Dev
+      date: 2022 - 2023
       company:
         name: Wiosna
-        logo: "i-simple-icons-vuedotjs"
+        logo: i-simple-icons-vuedotjs
         url: "#"
         color: "#4FC08D"
-    - position: "React Dev"
-      date: "2021 - 2022"
+    - position: React Dev
+      date: 2021 - 2022
       company:
         name: Sii sp. z o.o.
-        logo: "i-simple-icons-react"
+        logo: i-simple-icons-react
         url: "#"
         color: "#61DAFB"
-    - position: "Senior Dev"
-      date: "2020 - 2021"
+    - position: Senior Dev
+      date: 2020 - 2021
       company:
         name: Divante S.A
-        logo: "i-simple-icons-vuedotjs"
+        logo: i-simple-icons-vuedotjs
         url: "#"
         color: "#4FC08D"
-    - position: "Mid Dev"
-      date: "2018 - 2020"
+    - position: Mid Dev
+      date: 2018 - 2020
       company:
         name: Rainbow Tours S.A
-        logo: "i-simple-icons-vuedotjs"
+        logo: i-simple-icons-vuedotjs
         url: "#"
         color: "#4FC08D"
-    - position: "Front-End Dev"
-      date: "2014 - 2018"
+    - position: Front-End Dev
+      date: 2014 - 2018
       company:
         name: PGF S.A
-        logo: "i-lucide-code"
+        logo: i-lucide-code
         url: "#"
         color: "#888888"
-    - position: "Web Designer"
-      date: "2011 - 2012"
+    - position: Web Designer
+      date: 2011 - 2012
       company:
         name: Freelance
-        logo: "i-lucide-paint-bucket"
+        logo: i-lucide-paint-bucket
         url: "#"
         color: "#888888"
-testimonials:
-  - quote: "Work with Mateusz was a pleasure. He is a very talented developer and I would recommend him to anyone."
-    author:
-      name: 'Bartosz Rutkowski'
-      description: 'Founder of mm-event.pl'
-      avatar:
-        src: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80'
-        srcset: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x'
-  - quote: "Working with Mateusz was the best decision we made for our startup. He didn't just deliver designs—she challenged our assumptions, conducted thorough user research, and created an experience that truly resonated with our audience. Her technical knowledge of front-end development meant the handoff to our engineering team was seamless."
-blog:
-  title: "Latest Articles"
-  description: "Some of my recent thoughts"
 faq:
   title: Frequently Asked Questions
   description: Answers to common questions about my process and services.
@@ -133,3 +97,27 @@ faq:
         - label: What are your hobbies outside of work?
           content: |
             When I'm not designing or coding, I enjoy exploring Boston's neighborhoods, trying out new coffee shops, and hiking in the nearby reservations. I'm also passionate about photography and occasionally contribute to open-source projects.
+hero:
+  links:
+    - label: GitHub
+      to: https://github.com/mrGrochowski
+      color: neutral
+  images:
+    - src: /mm-event.jpg
+      alt: Random Image 1
+    - src: /hero/chrome-Gw3qknD8al.png
+      alt: becia.pl
+    - src: /hero/WhatsApp.Root-4aATrU4huo.png
+      alt: Strona ofertowa w jedną godzinę
+seo:
+  title: Mateusz Grochowski - Frontend Developer
+  description: I'm Mateusz Grochowski, a Frontend Developer with 8 years of experience specializing in Nuxt, Node.js, Medusa.js, and Supabase.
+testimonials:
+  - quote: Work with Mateusz was a pleasure. He is a very talented developer and I would recommend him to anyone.
+    author:
+      name: Bartosz Rutkowski
+      description: Founder of mm-event.pl
+      avatar:
+        src: https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80
+        srcset: https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x
+  - quote: Working with Mateusz was the best decision we made for our startup. He didn't just deliver designs—she challenged our assumptions, conducted thorough user research, and created an experience that truly resonated with our audience. Her technical knowledge of front-end development meant the handoff to our engineering team was seamless.
