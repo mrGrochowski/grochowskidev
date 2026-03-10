@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-og-image',
     'motion-v/nuxt',
-    '@nuxt/scripts'
+    '@nuxt/scripts',
+    'nuxt-studio'
   ],
 
   devtools: {
@@ -42,6 +43,14 @@ export default defineNuxtConfig({
       googleTagManager: {
         id: 'GTM-TB84TPHG'
       }
+    }
+  },
+
+  studio: {
+    repository: {
+      provider: 'github',
+      owner: 'mrGrochowski',
+      repo: 'grochowskidev'
     }
   }
 })
