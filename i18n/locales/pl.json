@@ -1,0 +1,9 @@
+{
+  "nav": {
+    "home": "Strona główna",
+    "projects": "Projekty",
+    "blog": "Blog",
+    "about": "O mnie",
+    "accessibility": "Deklaracja Dostępności"
+  }
+}

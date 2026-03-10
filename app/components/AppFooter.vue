@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const { footer } = useAppConfig()
+const { t } = useI18n()
+const localePath = useLocalePath()
 </script>
 
 <template>
@@ -9,6 +11,13 @@ const { footer } = useAppConfig()
   >
     <template #left>
       {{ footer.credits }}
+      <span class="mx-2">•</span>
+      <NuxtLink
+        :to="localePath('/deklaracja-dostepnosci')"
+        class="hover:underline"
+      >
+        {{ t('nav.accessibility') }}
+      </NuxtLink>
     </template>
 
     <template #right>
