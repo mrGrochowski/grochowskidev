@@ -5,8 +5,13 @@ defineProps<{
   page: IndexCollectionItem
 }>()
 
+const { locale } = useI18n()
+const collectionName = computed(() => locale.value === 'pl' ? 'blog_pl' : 'blog_en')
+
 const { data: posts } = await useAsyncData('index-blogs', () =>
-  queryCollection('blog').order('date', 'DESC').limit(3).all()
+  queryCollection(collectionName.value).order('date', 'DESC').limit(3).all(), {
+  watch: [collectionName]
+}
 )
 if (!posts.value) {
   throw createError({ statusCode: 404, statusMessage: 'blogs posts not found', fatal: true })
@@ -33,7 +38,7 @@ if (!posts.value) {
         orientation="horizontal"
         variant="naked"
         v-bind="post"
-        :to="post.path"
+        :to="post.path.replace(/^\/(en|pl)\//, '/')"
         :ui="{
           root: 'group relative lg:items-start lg:flex ring-0 hover:ring-0',
           body: '!px-0',

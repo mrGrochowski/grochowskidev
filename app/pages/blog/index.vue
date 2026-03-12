@@ -1,4 +1,7 @@
 <script setup lang="ts">
+const { locale } = useI18n()
+const collectionName = computed(() => locale.value === 'pl' ? 'blog_pl' : 'blog_en')
+
 const { data: page } = await useAsyncData('blog-page', () => {
   return queryCollection('pages').path('/blog').first()
 })
@@ -9,9 +12,15 @@ if (!page.value) {
     fatal: true
   })
 }
-const { data: posts } = await useAsyncData('blogs', () =>
-  queryCollection('blog').order('date', 'DESC').all()
+
+const { data: posts, refresh } = await useAsyncData('blogs', () =>
+  queryCollection(collectionName.value).order('date', 'DESC').all()
 )
+
+watch(collectionName, () => {
+  refresh()
+})
+
 if (!posts.value) {
   throw createError({
     statusCode: 404,
@@ -57,7 +66,7 @@ useSeoMeta({
           <UBlogPost
             variant="naked"
             orientation="horizontal"
-            :to="post.path"
+            :to="post.path.replace(/^\/(en|pl)\//, '/')"
             v-bind="post"
             :ui="{
               root: 'md:grid md:grid-cols-2 group overflow-visible transition-all duration-300',

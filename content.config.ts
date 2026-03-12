@@ -86,9 +86,19 @@ export default defineContentConfig({
         date: z.date()
       })
     }),
-    blog: defineCollection({
+    blog_en: defineCollection({
       type: 'page',
-      source: 'blog/*.md',
+      source: 'en/blog/*.md',
+      schema: z.object({
+        minRead: z.number(),
+        date: z.date(),
+        image: z.string().nonempty().editor({ input: 'media' }),
+        author: createAuthorSchema()
+      })
+    }),
+    blog_pl: defineCollection({
+      type: 'page',
+      source: 'pl/blog/*.md',
       schema: z.object({
         minRead: z.number(),
         date: z.date(),

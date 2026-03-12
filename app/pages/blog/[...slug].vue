@@ -4,16 +4,30 @@ import { mapContentNavigation } from '@nuxt/ui/utils/content'
 import { findPageBreadcrumb } from '@nuxt/content/utils'
 
 const route = useRoute()
+const { locale } = useI18n()
+const collectionName = computed(() => locale.value === 'pl' ? 'blog_pl' : 'blog_en')
+
+const contentPath = computed(() => `/${locale.value}${route.path}`)
 
 const { data: page } = await useAsyncData(route.path, () =>
-  queryCollection('blog').path(route.path).first()
+  queryCollection(collectionName.value).path(contentPath.value).first()
 )
+
 if (!page.value) throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
-const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
-  queryCollectionItemSurroundings('blog', route.path, {
+const { data: surround } = await useAsyncData(`${route.path}-surround`, async () => {
+  const data = await queryCollectionItemSurroundings(collectionName.value, contentPath.value, {
     fields: ['description']
   })
-)
+  if (data) {
+    return data.map(item => item
+      ? {
+          ...item,
+          path: item.path.replace(/^\/(en|pl)\//, '/')
+        }
+      : item)
+  }
+  return data
+})
 
 const navigation = inject<Ref<ContentNavigationItem[]>>('navigation', ref([]))
 const blogNavigation = computed(() => navigation.value.find(item => item.path === '/blog')?.children || [])
