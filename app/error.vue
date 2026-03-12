@@ -23,10 +23,17 @@ const { locale } = useI18n()
 const collectionName = computed(() => locale.value === 'pl' ? 'blog_pl' : 'blog_en')
 
 const [{ data: navigation }, { data: files }] = await Promise.all([
-  useAsyncData('navigation', () => {
-    return Promise.all([
+  useAsyncData('navigation', async () => {
+    const navs = await Promise.all([
       queryCollectionNavigation(collectionName.value)
     ])
+    // Clean up paths so they don't have the locale prefix which causes 404s
+    const cleanPaths = (items: any[]): any[] => items.map(item => ({
+      ...item,
+      path: item.path.replace(/^\/(en|pl)\//, '/'),
+      children: item.children ? cleanPaths(item.children) : undefined
+    }))
+    return navs.map(nav => cleanPaths(nav))
   }, {
     transform: data => data.flat(),
     watch: [collectionName]

@@ -14,11 +14,20 @@ const { data: page } = await useAsyncData(route.path, () =>
 )
 
 if (!page.value) throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
-const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
-  queryCollectionItemSurroundings(collectionName.value, contentPath.value, {
+const { data: surround } = await useAsyncData(`${route.path}-surround`, async () => {
+  const data = await queryCollectionItemSurroundings(collectionName.value, contentPath.value, {
     fields: ['description']
   })
-)
+  if (data) {
+    return data.map(item => item
+      ? {
+          ...item,
+          path: item.path.replace(/^\/(en|pl)\//, '/')
+        }
+      : item)
+  }
+  return data
+})
 
 const navigation = inject<Ref<ContentNavigationItem[]>>('navigation', ref([]))
 const blogNavigation = computed(() => navigation.value.find(item => item.path === '/blog')?.children || [])
