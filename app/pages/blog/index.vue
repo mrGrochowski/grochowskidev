@@ -72,7 +72,7 @@ useSeoMeta({
             :ui="{
               root: 'md:grid md:grid-cols-2 group overflow-visible transition-all duration-300',
               image:
-                'group-hover/blog-post:scale-105 rounded-lg shadow-lg border-4 border-muted ring-2 ring-default ![object-position:var(--img-pos)] ![object-fit:var(--img-fit)]',
+                'group-hover/blog-post:scale-105 rounded-lg shadow-lg border-4 border-muted ring-2 ring-default [object-position:var(--img-pos)]! [object-fit:var(--img-fit)]!',
               header:
                 index % 2 === 0
                   ? 'sm:-rotate-1 overflow-visible'

@@ -44,7 +44,7 @@ if (!posts.value) {
           root: 'group relative lg:items-start lg:flex ring-0 hover:ring-0',
           body: '!px-0',
           header: 'hidden',
-          image: '![object-position:var(--img-pos)] ![object-fit:var(--img-fit)]'
+          image: '[object-position:var(--img-pos)]! [object-fit:var(--img-fit)]!'
         }"
       >
         <template #footer>
