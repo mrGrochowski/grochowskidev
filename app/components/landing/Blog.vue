@@ -39,10 +39,12 @@ if (!posts.value) {
         variant="naked"
         v-bind="post"
         :to="post.path.replace(/^\/(en|pl)\//, '/')"
+        :style="{ '--img-pos': `${post.image_x || '50%'} ${post.image_y || '50%'}` }"
         :ui="{
           root: 'group relative lg:items-start lg:flex ring-0 hover:ring-0',
           body: '!px-0',
-          header: 'hidden'
+          header: 'hidden',
+          image: '![object-position:var(--img-pos)]'
         }"
       >
         <template #footer>

@@ -95,6 +95,8 @@ export default defineContentConfig({
         minRead: z.number(),
         date: z.date(),
         image: z.string().nonempty().editor({ input: 'media' }),
+        image_x: z.string().optional().describe('wyrownanie obrazka w osi x'),
+        image_y: z.string().optional().describe('wyrownanie obrazka w osi y'),
         author: createAuthorSchema()
       })
     }),
@@ -105,6 +107,8 @@ export default defineContentConfig({
         minRead: z.number(),
         date: z.date(),
         image: z.string().nonempty().editor({ input: 'media' }),
+        image_x: z.string().optional().describe('wyrownanie obrazka w osi x'),
+        image_y: z.string().optional().describe('wyrownanie obrazka w osi y'),
         author: createAuthorSchema()
       })
     }),

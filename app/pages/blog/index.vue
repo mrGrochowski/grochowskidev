@@ -68,10 +68,11 @@ useSeoMeta({
             orientation="horizontal"
             :to="post.path.replace(/^\/(en|pl)\//, '/')"
             v-bind="post"
+            :style="{ '--img-pos': `${post.image_x || '50%'} ${post.image_y || '50%'}` }"
             :ui="{
               root: 'md:grid md:grid-cols-2 group overflow-visible transition-all duration-300',
               image:
-                'group-hover/blog-post:scale-105 rounded-lg shadow-lg border-4 border-muted ring-2 ring-default',
+                'group-hover/blog-post:scale-105 rounded-lg shadow-lg border-4 border-muted ring-2 ring-default ![object-position:var(--img-pos)]',
               header:
                 index % 2 === 0
                   ? 'sm:-rotate-1 overflow-visible'
