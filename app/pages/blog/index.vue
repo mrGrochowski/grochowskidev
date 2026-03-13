@@ -30,19 +30,19 @@ if (!posts.value) {
 }
 
 useSeoMeta({
-  title: page.value?.seo?.title || page.value?.title,
-  ogTitle: page.value?.seo?.title || page.value?.title,
-  description: page.value?.seo?.description || page.value?.description,
-  ogDescription: page.value?.seo?.description || page.value?.description
+  title: page.value?.seo?.title || (locale.value === 'pl' ? page.value?.title_pl : page.value?.title),
+  ogTitle: page.value?.seo?.title || (locale.value === 'pl' ? page.value?.title_pl : page.value?.title),
+  description: page.value?.seo?.description || (locale.value === 'pl' ? page.value?.description_pl : page.value?.description),
+  ogDescription: page.value?.seo?.description || (locale.value === 'pl' ? page.value?.description_pl : page.value?.description)
 })
 </script>
 
 <template>
   <UPage v-if="page">
     <UPageHero
-      :title="page.title"
-      :description="page.description"
-      :links="page.links"
+      :title="locale === 'pl' ? page.title_pl : page.title"
+      :description="locale === 'pl' ? page.description_pl : page.description"
+      :links="page.links ? page.links.map(l => ({ ...l, label: locale === 'pl' && l.label_pl ? l.label_pl : l.label })) : []"
       :ui="{
         title: '!mx-0 text-left',
         description: '!mx-0 text-left',

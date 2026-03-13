@@ -1,17 +1,27 @@
 title: Hey, I'm Mateusz Grochowski
+title_pl: Cześć, jestem Mateusz Grochowski
 about:
   title: About Me
+  title_pl: O mnie
   description: |
     Frontend Developer with 8 years of experience specializing in Nuxt.js. I provide comprehensive web development services, focusing on modern, fast, and scalable solutions.
     Expert in e-commerce using Medusa.js and Node.js, as well as building robust backends with Supabase. I turn complex requirements into elegant, high-performance digital products.
+  description_pl: |
+    Frontend Developer z 8-letnim doświadczeniem specjalizujący się w Nuxt.js. Świadczę kompleksowe usługi w zakresie tworzenia nowoczesnych, szybkich i skalowalnych rozwiązań internetowych.
+    Ekspert w e-commerce przy użyciu Medusa.js i Node.js, a także w budowaniu solidnych backendów za pomocą Supabase. Przekształcam złożone wymagania w eleganckie, wydajne produkty cyfrowe.
 blog:
   title: Latest Articles
+  title_pl: Najnowsze artykuły
   description: Some of my recent thoughts
+  description_pl: Kilka moich ostatnich przemyśleń
 description: 8 years of experience in crafting high-performance websites and e-commerce solutions using Nuxt, Node.js (Medusa.js), and Supabase.
+description_pl: 8 lat doświadczenia w tworzeniu wydajnych stron internetowych i rozwiązań e-commerce za pomocą Nuxt, Node.js (Medusa.js) i Supabase.
 experience:
   title: Work Experience
+  title_pl: Doświadczenie zawodowe
   items:
     - position: Mid Dev
+      position_pl: Mid Dev
       date: 2023 - present
       company:
         name: Oferteo S.A.
@@ -19,6 +29,7 @@ experience:
         url: https://oferteo.pl
         color: "#4FC08D"
     - position: Senior Dev
+      position_pl: Senior Dev
       date: 2022 - 2023
       company:
         name: Wiosna
@@ -26,6 +37,7 @@ experience:
         url: "#"
         color: "#4FC08D"
     - position: React Dev
+      position_pl: React Dev
       date: 2021 - 2022
       company:
         name: Sii sp. z o.o.
@@ -33,6 +45,7 @@ experience:
         url: "#"
         color: "#61DAFB"
     - position: Senior Dev
+      position_pl: Senior Dev
       date: 2020 - 2021
       company:
         name: Divante S.A
@@ -40,6 +53,7 @@ experience:
         url: "#"
         color: "#4FC08D"
     - position: Mid Dev
+      position_pl: Mid Dev
       date: 2018 - 2020
       company:
         name: Rainbow Tours S.A
@@ -47,6 +61,7 @@ experience:
         url: "#"
         color: "#4FC08D"
     - position: Front-End Dev
+      position_pl: Front-End Dev
       date: 2014 - 2018
       company:
         name: PGF S.A
@@ -54,6 +69,7 @@ experience:
         url: "#"
         color: "#888888"
     - position: Web Designer
+      position_pl: Web Designer
       date: 2011 - 2012
       company:
         name: Freelance
@@ -62,44 +78,77 @@ experience:
         color: "#888888"
 faq:
   title: Frequently Asked Questions
+  title_pl: Często zadawane pytania
   description: Answers to common questions about my process and services.
+  description_pl: Odpowiedzi na często zadawane pytania dotyczące mojego procesu i usług.
   categories:
     - title: Services & Process
+      title_pl: Usługi i proces
       questions:
         - label: What services do you offer?
+          label_pl: Jakie usługi oferujesz?
           content: |
             I specialize in UX/UI design and front-end development. This includes user research, wireframing, interactive prototyping, creating intuitive user interfaces, building responsive websites and web applications (especially with Vue.js/Nuxt.js), and developing design systems. My goal is to create seamless digital experiences from concept to deployment.
+          content_pl: |
+            Specjalizuję się w projektowaniu UX/UI i programowaniu front-end. Obejmuje to badania użytkowników, tworzenie makiet, interaktywnych prototypów, tworzenie intuicyjnych interfejsów użytkownika, budowanie responsywnych stron internetowych i aplikacji webowych (szczególnie w Vue.js/Nuxt.js) oraz rozwój systemów projektowych. Moim celem jest tworzenie spójnych cyfrowych doświadczeń od koncepcji po wdrożenie.
         - label: What is your design process like?
+          label_pl: Jak wygląda Twój proces projektowania?
           content: |
             My process is collaborative and iterative, typically involving stages like Discovery & Research, Ideation & Prototyping, User Testing, Visual Design, and close collaboration with development teams during implementation. I tailor the process based on project needs, always focusing on user-centered solutions.
+          content_pl: |
+            Mój proces jest oparty na współpracy i ma charakter iteracyjny. Zwykle obejmuje etapy takie jak: odkrywanie i badania, generowanie pomysłów i prototypowanie, testowanie z użytkownikami, projektowanie wizualne oraz ścisłą współpracę z zespołami deweloperskimi podczas wdrażania. Dostosowuję proces do potrzeb projektu, zawsze skupiając się na rozwiązaniach zorientowanych na użytkownika.
         - label: Do you work with startups?
+          label_pl: Czy współpracujesz ze startupami?
           content: |
             Absolutely! I enjoy working with startups to help shape their product vision and create user-friendly interfaces from the ground up. I can adapt my process to fit the fast-paced startup environment.
+          content_pl: |
+            Oczywiście! Chętnie współpracuję ze startupami, pomagając im kształtować wizję produktu i tworzyć przyjazne dla użytkownika interfejsy od podstaw. Potrafię dostosować swój proces do dynamicznego środowiska startupów.
     - title: Pricing & Timelines
+      title_pl: Ceny i harmonogramy
       questions:
         - label: How much does a project typically cost?
+          label_pl: Ile zazwyczaj kosztuje projekt?
           content: |
             Project costs vary based on scope, complexity, features, and timeline. For comprehensive UX/UI design and front-end development projects, my engagements typically start around $5,000, with average projects ranging between $8,000 and $25,000. For consulting or specific design tasks, my day rate is $700.
+          content_pl: |
+            Koszty projektu różnią się w zależności od zakresu, złożoności, funkcji i harmonogramu. W przypadku kompleksowych projektów z zakresu UX/UI i front-endu, współpraca ze mną zazwyczaj zaczyna się od około 5000 USD, a średni koszt projektów waha się między 8000 a 25 000 USD. W przypadku konsultacji lub konkretnych zadań projektowych, moja stawka dzienna wynosi 700 USD.
         - label: What are your payment terms?
+          label_pl: Jakie są warunki płatności?
           content: |
             I generally require a 40% deposit to schedule the project and begin work, with the remaining 60% due upon successful project completion and delivery. I accept payments via bank transfer and Stripe.
+          content_pl: |
+            Zazwyczaj wymagam 40% zadatku na zaplanowanie projektu i rozpoczęcie pracy, a pozostałe 60% jest płatne po pomyślnym zakończeniu i dostarczeniu projektu. Akceptuję płatności przelewem bankowym oraz za pośrednictwem Stripe.
         - label: How long does a typical project take?
+          label_pl: Ile trwa typowy projekt?
           content: |
             Timelines depend heavily on the project's scope and complexity. Smaller projects might take 3-4 weeks, while larger, more involved projects can range from 2 to 4 months. I always provide a detailed timeline estimate after the initial discovery phase.
+          content_pl: |
+            Harmonogramy zależą w dużej mierze od zakresu i złożoności projektu. Mniejsze projekty mogą trwać od 3 do 4 tygodni, podczas gdy większe, bardziej zaawansowane projekty mogą zająć od 2 do 4 miesięcy. Zawsze przedstawiam szczegółowy szacunek harmonogramu po zakończeniu początkowej fazy odkrywania.
         - label: Do you offer retainers or ongoing support?
+          label_pl: Czy oferujesz stałe umowy na wsparcie (retainers)?
           content: |
             Yes, for clients needing ongoing design support, feature development, or maintenance, I offer monthly retainer options tailored to specific needs. Let's discuss if this is something you're interested in.
+          content_pl: |
+            Tak, dla klientów, którzy potrzebują stałego wsparcia projektowego, rozwoju nowych funkcji lub utrzymania, oferuję opcje miesięcznego wsparcia dostosowane do konkretnych potrzeb. Porozmawiajmy o tym, czy jest to rozwiązanie dla Ciebie.
     - title: About Me
+      title_pl: O mnie
       questions:
         - label: What do you enjoy most about your work?
+          label_pl: Co najbardziej lubisz w swojej pracy?
           content: |
             I love the challenge of solving complex problems through design and technology. It's incredibly rewarding to see people interact with something I've created and find it genuinely useful and easy to navigate. Bridging the gap between user needs and technical possibilities is what truly excites me.
+          content_pl: |
+            Uwielbiam wyzwania polegające na rozwiązywaniu złożonych problemów z wykorzystaniem projektowania i technologii. Jest niezwykle satysfakcjonujące, gdy widzę, że ludzie wchodzą w interakcję z czymś, co stworzyłem, uważając to za naprawdę użyteczne i łatwe w obsłudze. Połączenie potrzeb użytkownika z możliwościami technicznymi to to, co naprawdę mnie ekscytuje.
         - label: What are your hobbies outside of work?
+          label_pl: Jakie masz hobby poza pracą?
           content: |
             When I'm not designing or coding, I enjoy exploring Boston's neighborhoods, trying out new coffee shops, and hiking in the nearby reservations. I'm also passionate about photography and occasionally contribute to open-source projects.
+          content_pl: |
+            Kiedy nie projektuję ani nie programuję, uwielbiam odkrywać nowe dzielnice, testować kawiarnie i chodzić po górach. Interesuję się też fotografią i okazjonalnie przyczyniam się do rozwoju projektów open-source.
 hero:
   links:
     - label: GitHub
+      label_pl: GitHub
       to: https://github.com/mrGrochowski
       color: neutral
   images:

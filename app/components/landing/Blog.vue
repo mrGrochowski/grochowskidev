@@ -20,8 +20,8 @@ if (!posts.value) {
 
 <template>
   <UPageSection
-    :title="page.blog.title"
-    :description="page.blog.description"
+    :title="locale === 'pl' && page.blog.title_pl ? page.blog.title_pl : page.blog.title"
+    :description="locale === 'pl' && page.blog.description_pl ? page.blog.description_pl : page.blog.description"
     :ui="{
       container: 'px-0 !pt-0 sm:gap-6 lg:gap-8',
       title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium',
@@ -52,7 +52,7 @@ if (!posts.value) {
             size="xs"
             variant="link"
             class="px-0 gap-0"
-            label="Read Article"
+            :label="locale === 'pl' ? 'Czytaj artykuł' : 'Read Article'"
           >
             <template #trailing>
               <UIcon
