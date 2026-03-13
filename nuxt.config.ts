@@ -73,6 +73,12 @@ export default defineNuxtConfig({
     }
   },
 
+  sitemap: {
+    cacheMaxAgeSeconds: 360,
+    autoLastmod: true,
+    sitemaps: false
+  },
+
   studio: {
     repository: {
       provider: 'github',
