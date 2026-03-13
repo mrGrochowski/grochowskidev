@@ -29,6 +29,7 @@
   "devDependencies": {
     "@nuxt/eslint": "^1.15.1",
     "@nuxtjs/i18n": "^10.2.3",
+    "@nuxtjs/sitemap": "^7.6.0",
     "eslint": "^10.0.0",
     "nuxt-studio": "1.4.0",
     "typescript": "^5.9.3",
