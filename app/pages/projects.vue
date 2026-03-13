@@ -77,7 +77,8 @@ useSeoMeta({
           :reverse="index % 2 === 1"
           class="group"
           :ui="{
-            wrapper: 'max-sm:order-last'
+            wrapper: 'max-sm:order-last',
+            description: 'line-clamp-3'
           }"
         >
           <template #leading>
@@ -101,6 +102,7 @@ useSeoMeta({
             :src="project.image"
             :alt="project.title"
             class="object-cover w-full h-48 rounded-lg"
+            :style="{ objectPosition: `${project.image_x || '50%'} ${project.image_y || '50%'}` }"
           >
         </UPageCard>
       </Motion>

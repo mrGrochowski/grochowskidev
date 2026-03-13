@@ -19,6 +19,10 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  routeRules: {
+    '/**': { prerender: true }
+  },
+
   compatibilityDate: '2024-11-01',
 
   nitro: {

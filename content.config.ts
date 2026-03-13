@@ -81,6 +81,8 @@ export default defineContentConfig({
         description: z.string().nonempty(),
         description_pl: z.string().optional(),
         image: z.string().nonempty().editor({ input: 'media' }),
+        image_x: z.string().optional().describe('wyrownanie obrazka w osi x'),
+        image_y: z.string().optional().describe('wyrownanie obrazka w osi y'),
         url: z.string().nonempty(),
         tags: z.array(z.string()),
         date: z.date()
