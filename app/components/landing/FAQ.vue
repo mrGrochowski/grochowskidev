@@ -5,12 +5,18 @@ const props = defineProps<{
   page: IndexCollectionItem
 }>()
 
+const { locale } = useI18n()
+
 const items = computed(() => {
   return props.page.faq?.categories.map((faq) => {
     return {
-      label: faq.title,
+      label: locale.value === 'pl' && faq.title_pl ? faq.title_pl : faq.title,
       key: faq.title.toLowerCase(),
-      questions: faq.questions
+      questions: faq.questions.map(q => ({
+        ...q,
+        label: locale.value === 'pl' && q.label_pl ? q.label_pl : q.label,
+        content: locale.value === 'pl' && q.content_pl ? q.content_pl : q.content
+      }))
     }
   })
 })
@@ -26,8 +32,8 @@ const ui = {
 
 <template>
   <UPageSection
-    :title="page.faq.title"
-    :description="page.faq.description"
+    :title="locale === 'pl' && page.faq.title_pl ? page.faq.title_pl : page.faq.title"
+    :description="locale === 'pl' && page.faq.description_pl ? page.faq.description_pl : page.faq.description"
     :ui="{
       container: 'px-0 !pt-0 gap-4 sm:gap-4',
       title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium',

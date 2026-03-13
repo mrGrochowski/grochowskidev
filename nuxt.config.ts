@@ -10,7 +10,8 @@ export default defineNuxtConfig({
     'motion-v/nuxt',
     '@nuxt/scripts',
     'nuxt-studio',
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    '@nuxtjs/sitemap'
   ],
 
   devtools: {
@@ -18,6 +19,10 @@ export default defineNuxtConfig({
   },
 
   css: ['~/assets/css/main.css'],
+
+  site: {
+    url: 'https://grochowski.it'
+  },
 
   routeRules: {
     '/**': { prerender: true }
@@ -28,10 +33,15 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: [
-        '/'
+        '/',
+        '/pl'
       ],
       crawlLinks: true
     }
+  },
+
+  experimental: {
+    payloadExtraction: true
   },
 
   eslint: {
@@ -49,7 +59,15 @@ export default defineNuxtConfig({
       { code: 'pl', language: 'pl-PL', name: 'Polski', file: 'pl.json' }
     ],
     langDir: './locales',
-    defaultLocale: 'en'
+    defaultLocale: 'en',
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root', // recommended
+      alwaysRedirect: false,
+      fallbackLocale: 'en'
+    }
   },
 
   scripts: {
@@ -58,6 +76,12 @@ export default defineNuxtConfig({
         id: 'GTM-TB84TPHG'
       }
     }
+  },
+
+  sitemap: {
+    cacheMaxAgeSeconds: 360,
+    autoLastmod: true,
+    sitemaps: false
   },
 
   studio: {

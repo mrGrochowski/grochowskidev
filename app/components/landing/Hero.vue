@@ -2,6 +2,7 @@
 import type { IndexCollectionItem } from '@nuxt/content'
 
 const { footer, global } = useAppConfig()
+const { locale } = useI18n()
 
 defineProps<{
   page: IndexCollectionItem
@@ -59,7 +60,7 @@ defineProps<{
           delay: 0.1
         }"
       >
-        {{ page.title }}
+        {{ locale === 'pl' && (page as any).title_pl ? (page as any).title_pl : page.title }}
       </Motion>
     </template>
 
@@ -80,7 +81,7 @@ defineProps<{
           delay: 0.3
         }"
       >
-        {{ page.description }}
+        {{ locale === 'pl' && (page as any).description_pl ? (page as any).description_pl : page.description }}
       </Motion>
     </template>
 
@@ -105,7 +106,7 @@ defineProps<{
           v-if="page.hero.links"
           class="flex items-center gap-2"
         >
-          <UButton v-bind="page.hero.links[0]" />
+          <UButton v-bind="{ ...(page.hero.links[0] || {}), label: locale === 'pl' && page.hero.links[0]?.label_pl ? page.hero.links[0].label_pl : page.hero.links[0]?.label }" />
           <UButton
             :color="global.available ? 'success' : 'error'"
             variant="ghost"
@@ -182,6 +183,10 @@ defineProps<{
         <NuxtImg
           width="234"
           height="234"
+          sizes="234px"
+          format="webp"
+          :loading="index < 4 ? 'eager' : 'lazy'"
+          :fetchpriority="index < 4 ? 'high' : 'auto'"
           class="rounded-lg aspect-square object-cover"
           :class="index % 2 === 0 ? '-rotate-2' : 'rotate-2'"
           v-bind="img"

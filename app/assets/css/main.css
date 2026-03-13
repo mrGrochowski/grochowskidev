@@ -23,3 +23,10 @@
     background-color: #474747;
   }
 }
+
+/* Fix for CookieYes buttons contrast ratio (Lighthouse) */
+.cky-btn-accept, .cky-btn-reject {
+  background-color: #0B5ED7 !important; /* Original is #1578F7, 0B5ED7 gives >4.5:1 contrast against white */
+  border-color: #0B5ED7 !important;
+  color: #FFFFFF !important;
+}

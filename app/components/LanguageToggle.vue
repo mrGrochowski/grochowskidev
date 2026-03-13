@@ -8,7 +8,7 @@ const { locale, setLocale } = useI18n()
     variant="ghost"
     color="neutral"
     class="rounded-full px-2"
-    :aria-label="locale === 'en' ? 'Zmień język na Polski' : 'Switch language to English'"
+    :aria-label="locale === 'en' ? 'PL - Zmień język na Polski' : 'EN - Switch language to English'"
     @click="setLocale(locale === 'en' ? 'pl' : 'en')"
   />
 </template>

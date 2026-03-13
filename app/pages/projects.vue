@@ -12,26 +12,32 @@ if (!page.value) {
   })
 }
 
-const { data: projects } = await useAsyncData('projects', () => {
-  return queryCollection('projects').all()
+const collectionName = computed(() => locale.value === 'pl' ? 'projects_pl' : 'projects_en')
+
+const { data: projects, refresh } = await useAsyncData('projects', () => {
+  return queryCollection(collectionName.value).all()
+})
+
+watch(collectionName, () => {
+  refresh()
 })
 
 const { global } = useAppConfig()
 
 useSeoMeta({
-  title: page.value?.seo?.title || page.value?.title,
-  ogTitle: page.value?.seo?.title || page.value?.title,
-  description: page.value?.seo?.description || page.value?.description,
-  ogDescription: page.value?.seo?.description || page.value?.description
+  title: page.value?.seo?.title || (locale.value === 'pl' ? page.value?.title_pl : page.value?.title),
+  ogTitle: page.value?.seo?.title || (locale.value === 'pl' ? page.value?.title_pl : page.value?.title),
+  description: page.value?.seo?.description || (locale.value === 'pl' ? page.value?.description_pl : page.value?.description),
+  ogDescription: page.value?.seo?.description || (locale.value === 'pl' ? page.value?.description_pl : page.value?.description)
 })
 </script>
 
 <template>
   <UPage v-if="page">
     <UPageHero
-      :title="page.title"
-      :description="page.description"
-      :links="page.links"
+      :title="locale === 'pl' ? page.title_pl : page.title"
+      :description="locale === 'pl' ? page.description_pl : page.description"
+      :links="page.links.map(l => ({ ...l, label: locale === 'pl' && l.label_pl ? l.label_pl : l.label }))"
       :ui="{
         title: '!mx-0 text-left',
         description: '!mx-0 text-left',
@@ -44,11 +50,12 @@ useSeoMeta({
           class="flex items-center gap-2"
         >
           <UButton
-            :label="page.links[0]?.label"
+            :label="locale === 'pl' && page.links[0]?.label_pl ? page.links[0].label_pl : page.links[0]?.label"
             :to="global.meetingLink"
             v-bind="page.links[0]"
           />
           <UButton
+            :label="locale === 'pl' && page.links[1]?.label_pl ? page.links[1].label_pl : page.links[1]?.label"
             :to="`mailto:${global.email}`"
             v-bind="page.links[1]"
           />
@@ -70,7 +77,7 @@ useSeoMeta({
       >
         <UPageCard
           :title="project.title"
-          :description="locale === 'pl' && project.description_pl ? project.description_pl : project.description"
+          :description="project.description"
           :to="project.url"
           orientation="horizontal"
           variant="naked"
@@ -91,7 +98,7 @@ useSeoMeta({
               :to="project.url"
               class="text-sm text-primary flex items-center"
             >
-              View Project
+              {{ locale === 'pl' ? 'Zobacz projekt' : 'View Project' }}
               <UIcon
                 name="i-lucide-arrow-right"
                 class="size-4 text-primary transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100"
