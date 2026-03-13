@@ -4,11 +4,12 @@ import type { IndexCollectionItem } from '@nuxt/content'
 defineProps<{
   page: IndexCollectionItem
 }>()
+const { locale } = useI18n()
 </script>
 
 <template>
   <UPageSection
-    :title="page.experience.title"
+    :title="locale === 'pl' && page.experience.title_pl ? page.experience.title_pl : page.experience.title"
     :ui="{
       container: '!p-0 gap-4 sm:gap-4',
       title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium',
@@ -36,7 +37,7 @@ defineProps<{
             target="_blank"
           >
             <span class="text-sm">
-              {{ experience.position }}
+              {{ locale === 'pl' && experience.position_pl ? experience.position_pl : experience.position }}
             </span>
             <div
               class="inline-flex items-center gap-1"

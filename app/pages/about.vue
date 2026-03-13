@@ -12,19 +12,21 @@ if (!page.value) {
 
 const { global } = useAppConfig()
 
+const { locale } = useI18n()
+
 useSeoMeta({
-  title: page.value?.seo?.title || page.value?.title,
-  ogTitle: page.value?.seo?.title || page.value?.title,
-  description: page.value?.seo?.description || page.value?.description,
-  ogDescription: page.value?.seo?.description || page.value?.description
+  title: page.value?.seo?.title || (locale.value === 'pl' ? page.value?.title_pl : page.value?.title),
+  ogTitle: page.value?.seo?.title || (locale.value === 'pl' ? page.value?.title_pl : page.value?.title),
+  description: page.value?.seo?.description || (locale.value === 'pl' ? page.value?.description_pl : page.value?.description),
+  ogDescription: page.value?.seo?.description || (locale.value === 'pl' ? page.value?.description_pl : page.value?.description)
 })
 </script>
 
 <template>
   <UPage v-if="page">
     <UPageHero
-      :title="page.title"
-      :description="page.description"
+      :title="locale === 'pl' ? page.title_pl : page.title"
+      :description="locale === 'pl' ? page.description_pl : page.description"
       orientation="horizontal"
       :ui="{
         container: 'lg:flex sm:flex-row items-center',
@@ -46,7 +48,7 @@ useSeoMeta({
       }"
     >
       <MDC
-        :value="page.content"
+        :value="locale === 'pl' ? page.content_pl : page.content"
         unwrap="p"
       />
       <div class="flex flex-row justify-center items-center py-10 space-x-[-2rem]">

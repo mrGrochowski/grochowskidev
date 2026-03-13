@@ -1,0 +1,10 @@
+title: Mięciutkie szydełkowanie
+description: "I recently built a custom website for Becia, a talented creator whose passion is handmade crochet toys. The goal was to create a cozy, responsive landing page using Nuxt 4. I set up Nuxt Content, Studio, and Image modules to keep the content easy to manage. One of the main features was a contact form powered by Nodemailer so customers could easily join her waiting list. Throughout the process, I tackled some Vercel deployment quirks, optimized the TypeScript config, and added a sticky mobile menu to make navigation seamless. I also migrated her logo to a custom vector format for a crisp look. It was a fun project blending modern web tech with the charm of handmade crafts, perfect for reaching customers locally in Łódź and Zgierz who are looking for custom-made websites or unique handmade gifts."
+description_pl: "Ostatnio miałem okazję stworzyć stronę na zamówienie dla Beci – niesamowitej twórczyni, której pasją jest rękodzieło, a dokładniej urocze pluszaki na szydełku. Chciałem, żeby strona oddawała ten ciepły, przytulny klimat, dlatego postawiłem na landing page w Nuxt 4. Skonfigurowałem moduły Nuxt Content, Studio i Image, żeby zarządzanie treścią było proste i przyjemne. Dodałem też formularz kontaktowy z Nodemailerem, dzięki czemu klienci z okolicznych miast jak Łódź czy Zgierz (i nie tylko!) mogą łatwo zapisać się na listę oczekujących. Po drodze rozwiązałem kilka problemów z Vercel, ogarnąłem błędy 404 w Nuxt Studio i dopracowałem responsywność, dodając wygodne 'przyklejone' menu na telefonach. Wisienką na torcie była migracja jej logo do wektorów (SVG), co dało świetny, ostry wygląd w nagłówku. Super było połączyć nowoczesne technologie z tak fajnym, rzemieślniczym klimatem."
+image: /becia.jpg
+image_x: 0%
+image_y: 12%
+
+url: "https://becia.pl"
+tags: ["Nuxt 4", "Frontend", "Handmade", "strona na zamówienie", "rękodzieło", "łódź", "zgierz"]
+date: "2024"

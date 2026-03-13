@@ -2,11 +2,14 @@ import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 
 const createBaseSchema = () => z.object({
   title: z.string(),
-  description: z.string()
+  title_pl: z.string().optional(),
+  description: z.string(),
+  description_pl: z.string().optional()
 })
 
 const createButtonSchema = () => z.object({
   label: z.string(),
+  label_pl: z.string().optional(),
   icon: z.string().optional(),
   to: z.string().optional(),
   color: z.enum(['primary', 'neutral', 'success', 'warning', 'error', 'info']).optional(),
@@ -49,6 +52,7 @@ export default defineContentConfig({
           items: z.array(z.object({
             date: z.date(),
             position: z.string(),
+            position_pl: z.string().optional(),
             company: z.object({
               name: z.string(),
               url: z.string(),
@@ -63,23 +67,39 @@ export default defineContentConfig({
           categories: z.array(
             z.object({
               title: z.string().nonempty(),
+              title_pl: z.string().optional(),
               questions: z.array(
                 z.object({
                   label: z.string().nonempty(),
-                  content: z.string().nonempty()
+                  label_pl: z.string().optional(),
+                  content: z.string().nonempty(),
+                  content_pl: z.string().optional()
                 })
               )
             }))
         })
       })
     }),
-    projects: defineCollection({
+    projects_en: defineCollection({
       type: 'data',
-      source: 'projects/*.yml',
+      source: 'en/projects/*.yml',
       schema: z.object({
         title: z.string().nonempty(),
         description: z.string().nonempty(),
-        description_pl: z.string().optional(),
+        image: z.string().nonempty().editor({ input: 'media' }),
+        image_x: z.string().optional().describe('wyrownanie obrazka w osi x'),
+        image_y: z.string().optional().describe('wyrownanie obrazka w osi y'),
+        url: z.string().nonempty(),
+        tags: z.array(z.string()),
+        date: z.date()
+      })
+    }),
+    projects_pl: defineCollection({
+      type: 'data',
+      source: 'pl/projects/*.yml',
+      schema: z.object({
+        title: z.string().nonempty(),
+        description: z.string().nonempty(),
         image: z.string().nonempty().editor({ input: 'media' }),
         image_x: z.string().optional().describe('wyrownanie obrazka w osi x'),
         image_y: z.string().optional().describe('wyrownanie obrazka w osi y'),
@@ -136,7 +156,8 @@ export default defineContentConfig({
       type: 'page',
       source: 'about.yml',
       schema: z.object({
-        content: z.object({}),
+        content: z.string().optional(),
+        content_pl: z.string().optional(),
         images: z.array(createImageSchema())
       })
     })

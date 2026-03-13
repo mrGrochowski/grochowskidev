@@ -1,5 +1,7 @@
 title: About Me
+title_pl: O mnie
 description: Learn more about my journey as a Frontend Developer with 8 years of experience, specializing in Nuxt, Medusa.js, and Supabase.
+description_pl: Dowiedz się więcej o mojej drodze jako Frontend Developer z 8-letnim doświadczeniem, specjalizujący się w Nuxt, Medusa.js i Supabase.
 content: |
   Hi, I'm **Mateusz Grochowski**, a Frontend Developer with over 8 years of experience in the industry. My passion lies in creating high-performance, scalable web applications and intuitive user interfaces.
 
@@ -22,6 +24,28 @@ content: |
   When I'm not coding, I'm constantly exploring new technologies and contributing to the developer community. I'm passionate about building tools that make people's lives easier and digital experiences better.
 
   Thanks for visiting my portfolio. Feel free to check out my [projects](/projects) or [get in touch](/#contact) if you'd like to collaborate!
+content_pl: |
+  Cześć, jestem **Mateusz Grochowski**, Frontend Developer z ponad 8-letnim doświadczeniem w branży. Moją pasją jest tworzenie wydajnych, skalowalnych aplikacji internetowych i intuicyjnych interfejsów użytkownika.
+
+  Specjalizuję się w ekosystemie **Nuxt**, dostarczając kompletne, gotowe do produkcji strony internetowe. Moja wiedza obejmuje budowanie złożonych rozwiązań e-commerce przy użyciu **Node.js** i **Medusa.js**, a także wykorzystanie **Supabase** do efektywnego zarządzania backendem i obsługi danych w czasie rzeczywistym.
+
+  ### Moje podejście
+
+  Uważam, że najlepsze rozwiązania internetowe to idealne połączenie wydajności, łatwości w utrzymaniu i doświadczenia użytkownika. Moja 8-letnia podróż nauczyła mnie, jak wypełnić lukę między złożonymi wymaganiami biznesowymi a eleganckimi wdrożeniami technicznymi.
+
+  Niezależnie od tego, czy jest to mały landing page, czy duża platforma e-commerce, skupiam się na pisaniu czystego, wydajnego kodu i wykorzystywaniu najnowszych technologii, aby zapewnić długoterminowy sukces projektu.
+
+  ### Główne technologie
+
+  - **Nuxt i Vue.js**: Do budowania nowoczesnych, przyjaznych dla SEO frontendów.
+  - **Node.js i Medusa.js**: Dla potężnych, konfigurowalnych backendów e-commerce.
+  - **Supabase**: Do bazy danych, uwierzytelniania i funkcji w czasie rzeczywistym.
+
+  ### Poza ekranem
+
+  Kiedy nie programuję, stale odkrywam nowe technologie i udzielam się w społeczności programistów. Moją pasją jest tworzenie narzędzi, które ułatwiają ludziom życie i poprawiają cyfrowe doświadczenia.
+
+  Dzięki za odwiedzenie mojego portfolio. Zachęcam do sprawdzenia moich [projektów](/projects) lub [skontaktowania się](/#contact), jeśli chcesz nawiązać współpracę!
 images:
   - src: /workspace.jpg
     alt: My daily workspace
