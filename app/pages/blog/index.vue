@@ -42,7 +42,7 @@ useSeoMeta({
     <UPageHero
       :title="locale === 'pl' ? page.title_pl : page.title"
       :description="locale === 'pl' ? page.description_pl : page.description"
-      :links="page.links.map(l => ({ ...l, label: locale === 'pl' && l.label_pl ? l.label_pl : l.label }))"
+      :links="page.links ? page.links.map(l => ({ ...l, label: locale === 'pl' && l.label_pl ? l.label_pl : l.label })) : []"
       :ui="{
         title: '!mx-0 text-left',
         description: '!mx-0 text-left',
