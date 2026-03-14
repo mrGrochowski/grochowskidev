@@ -7,7 +7,12 @@ const route = useRoute()
 const { locale } = useI18n()
 const collectionName = computed(() => locale.value === 'pl' ? 'blog_pl' : 'blog_en')
 
-const contentPath = computed(() => `/${locale.value}${route.path}`)
+const contentPath = computed(() => {
+  if (route.path.startsWith(`/${locale.value}/`)) {
+    return route.path
+  }
+  return `/${locale.value}${route.path}`
+})
 
 const { data: page } = await useAsyncData(route.path, () =>
   queryCollection(collectionName.value).path(contentPath.value).first()
