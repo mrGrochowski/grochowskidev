@@ -5,5 +5,19 @@
     "blog": "Blog",
     "about": "O mnie",
     "accessibility": "Deklaracja Dostępności"
+  },
+  "blog": {
+    "minRead": "MIN CZYTANIA",
+    "copyLink": "Kopiuj link",
+    "copied": "Link do artykułu skopiowany do schowka"
+  },
+  "hero": {
+    "available": "Dostępny na nowe projekty",
+    "notAvailable": "Obecnie niedostępny",
+    "availableAria": "Dostępny na nowe projekty. Kliknij, aby umówić spotkanie.",
+    "notAvailableAria": "Obecnie niedostępny na nowe projekty"
+  },
+  "footer": {
+    "builtBy": "Stworzone przez {name} • © {year}"
   }
 }
