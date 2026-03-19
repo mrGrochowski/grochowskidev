@@ -49,5 +49,7 @@ content_pl: |
 images:
   - src: /workspace.jpg
     alt: My daily workspace
+    alt_pl: Moje codzienne miejsce pracy
   - src: /mlody.jpg
     alt: Me when I was Young 😁
+    alt_pl: Ja za młodzika 😁

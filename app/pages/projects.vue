@@ -77,7 +77,7 @@ useSeoMeta({
       >
         <UPageCard
           :title="project.title"
-          :description="project.description"
+          :description="('description_pl' in project && locale === 'pl' && project.description_pl) ? project.description_pl : project.description"
           :to="project.url"
           orientation="horizontal"
           variant="naked"

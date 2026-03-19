@@ -10,8 +10,7 @@ const localePath = useLocalePath()
     :ui="{ left: 'text-muted text-xs' }"
   >
     <template #left>
-      {{ footer.credits }}
-      <span class="mx-2">•</span>
+      {{ t('footer.builtBy', { name: 'Mateusz Grochowski', year: new Date().getFullYear() }) }}
       <NuxtLink
         :to="localePath('/deklaracja-dostepnosci')"
         class="hover:underline"

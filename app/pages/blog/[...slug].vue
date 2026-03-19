@@ -4,7 +4,7 @@ import { mapContentNavigation } from '@nuxt/ui/utils/content'
 import { findPageBreadcrumb } from '@nuxt/content/utils'
 
 const route = useRoute()
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 const collectionName = computed(() => locale.value === 'pl' ? 'blog_pl' : 'blog_en')
 
 const contentPath = computed(() => {
@@ -62,7 +62,7 @@ useSeoMeta({
 const articleLink = computed(() => `${window?.location}`)
 
 const formatDate = (dateString: string) => {
-  return new Date(dateString).toLocaleDateString('en-US', {
+  return new Date(dateString).toLocaleDateString(locale.value === 'pl' ? 'pl-PL' : 'en-US', {
     year: 'numeric',
     month: 'short',
     day: 'numeric'
@@ -79,7 +79,7 @@ const formatDate = (dateString: string) => {
           class="text-sm flex items-center gap-1"
         >
           <UIcon name="lucide:chevron-left" />
-          Blog
+          {{ t('nav.blog') }}
         </ULink>
         <div class="flex flex-col gap-3 mt-8">
           <div class="flex text-xs text-muted items-center justify-center gap-2">
@@ -90,7 +90,7 @@ const formatDate = (dateString: string) => {
               -
             </span>
             <span v-if="page.minRead">
-              {{ page.minRead }} MIN READ
+              {{ page.minRead }} {{ t('blog.minRead') }}
             </span>
           </div>
           <NuxtImg
@@ -126,8 +126,8 @@ const formatDate = (dateString: string) => {
               size="sm"
               variant="link"
               color="neutral"
-              label="Copy link"
-              @click="copyToClipboard(articleLink, 'Article link copied to clipboard')"
+              :label="t('blog.copyLink')"
+              @click="copyToClipboard(articleLink, t('blog.copied'))"
             />
           </div>
           <UContentSurround :surround />

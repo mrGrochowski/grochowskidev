@@ -2,7 +2,7 @@
 import type { IndexCollectionItem } from '@nuxt/content'
 
 const { footer, global } = useAppConfig()
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 
 defineProps<{
   page: IndexCollectionItem
@@ -112,8 +112,8 @@ defineProps<{
             variant="ghost"
             class="gap-2"
             :to="global.available ? global.meetingLink : ''"
-            :label="global.available ? 'Available for new projects' : 'Not available at the moment'"
-            :aria-label="global.available ? 'Available for new projects. Click to schedule a meeting.' : 'Currently not available for new projects'"
+            :label="global.available ? t('hero.available') : t('hero.notAvailable')"
+            :aria-label="global.available ? t('hero.availableAria') : t('hero.notAvailableAria')"
           >
             <template #leading>
               <span class="relative flex size-2">

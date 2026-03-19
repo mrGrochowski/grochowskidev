@@ -91,6 +91,7 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string().nonempty(),
         description: z.string().nonempty(),
+        description_pl: z.string().optional(),
         image: z.string().nonempty().editor({ input: 'media' }),
         image_x: z.string().optional().describe('wyrownanie obrazka w osi x'),
         image_y: z.string().optional().describe('wyrownanie obrazka w osi y'),
@@ -106,6 +107,7 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string().nonempty(),
         description: z.string().nonempty(),
+        description_pl: z.string().optional(),
         image: z.string().nonempty().editor({ input: 'media' }),
         image_x: z.string().optional().describe('wyrownanie obrazka w osi x'),
         image_y: z.string().optional().describe('wyrownanie obrazka w osi y'),
@@ -119,6 +121,8 @@ export default defineContentConfig({
       type: 'page',
       source: 'en/blog/*.md',
       schema: z.object({
+        title_pl: z.string().optional(),
+        description_pl: z.string().optional(),
         minRead: z.number(),
         date: z.date(),
         image: z.string().nonempty().editor({ input: 'media' }),
@@ -132,6 +136,8 @@ export default defineContentConfig({
       type: 'page',
       source: 'pl/blog/*.md',
       schema: z.object({
+        title_pl: z.string().optional(),
+        description_pl: z.string().optional(),
         minRead: z.number(),
         date: z.date(),
         image: z.string().nonempty().editor({ input: 'media' }),

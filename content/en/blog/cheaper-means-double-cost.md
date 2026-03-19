@@ -1,6 +1,8 @@
 ---
 title: "Frontend in 2026: Design, GDPR, and Why 'Cheap' Always Ends Up Costing Doubles"
+title_pl: "Frontend w 2026: Design, RODO i dlaczego 'tanio' zawsze oznacza podwójne koszty"
 description: Short article about why cheap always ends up with big cost after few years.
+description_pl: "Krótki artykuł o tym, dlaczego tanie rozwiązania zawsze wiążą się z dużymi kosztami po kilku latach."
 date: 2026-03-01
 image: /mm-event.jpg
 minRead: 2

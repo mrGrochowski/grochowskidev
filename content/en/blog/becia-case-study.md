@@ -1,6 +1,8 @@
 ---
 title: "Custom Website for Handmade Crafts: My Case Study from Łódź and Zgierz"
+title_pl: "Strona na zamówienie dla rękodzieła: Moje case study z Łodzi i Zgierza"
 description: Discover how I built a fast, modern website for a creator of soft, crocheted plushies. A real case study of the implementation!
+description_pl: "Zobacz jak stworzyłem szybką i nowoczesną stronę dla twórcy mięciutkich maskotek na szydełku. Prawdziwe case study z wdrożenia!"
 date: 2024-03-12
 image: https://i.postimg.cc/MHxft4y4/becia.jpg
 minRead: 4

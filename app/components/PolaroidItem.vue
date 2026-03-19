@@ -3,12 +3,14 @@ defineProps<{
   image: {
     src: string
     alt: string
+    alt_pl?: string
     image_x?: string
     image_y?: string
     image_fit?: string
   }
   index: number
 }>()
+const { locale } = useI18n()
 </script>
 
 <template>
@@ -26,7 +28,7 @@ defineProps<{
       :style="{ objectPosition: `${image.image_x || '50%'} ${image.image_y || '50%'}`, objectFit: image.image_fit || 'cover' }"
     >
     <span class="w-32 text-xs text-black font-serif font-medium text-center mt-2">
-      {{ image.alt }}
+      {{ locale === 'pl' && image.alt_pl ? image.alt_pl : image.alt }}
     </span>
   </div>
 </template>
