@@ -1,5 +1,6 @@
 title: Tatolista
 description: A community-driven platform for parents to curate safe, engaging, and educational videos for boys aged 6-12. No violence, no boredom—just high-quality music and films. Features a voting system to promote top content from a waiting room to the main "Tatolista" based on a 90% approval rate.
+description_pl: "Społecznościowa platforma dla rodziców do tworzenia zestawień bezpiecznych, angażujących i edukacyjnych materiałów wideo dla chłopców w wieku 6-12 lat. Bez przemocy, bez nudy — tylko wysokiej jakości muzyka i filmy. Posiada system głosowania do promowania najlepszych treści z 'poczekalni' na główną listę 'Tatolista' po osiągnięciu progu 90% aprobaty."
 image: /tatolista.jpg
 url: "https://tatolista.online"
 tags: ["UI Design", "Front-End Dev", "Community"]
