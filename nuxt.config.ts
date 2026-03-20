@@ -25,6 +25,9 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
+    '/__nuxt_studio/**': { prerender: false },
+    '/__studio/**': { prerender: false },
+    '/_studio/**': { prerender: false },
     '/**': { prerender: true }
   },
 
