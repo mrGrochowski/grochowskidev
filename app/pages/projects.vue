@@ -30,6 +30,37 @@ useSeoMeta({
   description: page.value?.seo?.description || (locale.value === 'pl' ? page.value?.description_pl : page.value?.description),
   ogDescription: page.value?.seo?.description || (locale.value === 'pl' ? page.value?.description_pl : page.value?.description)
 })
+
+const itemListStructuredData = computed(() => {
+  if (!projects.value) return null
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    'name': locale.value === 'pl' ? page.value?.title_pl || page.value?.title : page.value?.title,
+    'itemListElement': projects.value.map((project, index) => ({
+      '@type': 'ListItem',
+      'position': index + 1,
+      'item': {
+        '@type': 'CreativeWork', // Use CreativeWork or SoftwareApplication for projects
+        'name': project.title,
+        'description': ('description_pl' in project && locale.value === 'pl' && project.description_pl) ? project.description_pl : project.description,
+        'url': project.url.startsWith('http') ? project.url : `https://grochowski.it${project.url}`
+      }
+    }))
+  }
+})
+
+useHead(() => ({
+  script: itemListStructuredData.value
+    ? [
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify(itemListStructuredData.value)
+        }
+      ]
+    : []
+}))
 </script>
 
 <template>

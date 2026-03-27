@@ -68,6 +68,35 @@ const formatDate = (dateString: string) => {
     day: 'numeric'
   })
 }
+
+const articleStructuredData = computed(() => {
+  if (!page.value) return null
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    'headline': page.value?.title,
+    'description': page.value?.description,
+    'image': page.value.image ? `https://grochowski.it${page.value.image}` : undefined,
+    'datePublished': page.value.date ? new Date(page.value.date).toISOString() : undefined,
+    'author': {
+      '@type': 'Person',
+      'name': page.value.author?.name || 'Mateusz Grochowski',
+      'url': page.value.author?.to ? `https://grochowski.it${page.value.author.to}` : 'https://grochowski.it'
+    }
+  }
+})
+
+useHead(() => ({
+  script: articleStructuredData.value
+    ? [
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify(articleStructuredData.value)
+        }
+      ]
+    : []
+}))
 </script>
 
 <template>
