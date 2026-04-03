@@ -1,8 +1,12 @@
 <script setup lang="ts">
 import type { NavigationMenuItem } from '@nuxt/ui'
 
+export interface ExtendedNavigationMenuItem extends NavigationMenuItem {
+  isLogo?: boolean
+}
+
 defineProps<{
-  links: NavigationMenuItem[]
+  links: ExtendedNavigationMenuItem[]
 }>()
 </script>
 
@@ -18,6 +22,18 @@ defineProps<{
         linkLeadingIcon: 'hidden'
       }"
     >
+      <template #item="{ item }">
+        <template v-if="(item as any).isLogo">
+          <NuxtImg
+            src="/logo.png"
+            alt="Logo"
+            class="h-6 w-auto dark:invert"
+          />
+        </template>
+        <template v-else>
+          <span class="truncate">{{ (item as any).label }}</span>
+        </template>
+      </template>
       <template #list-trailing>
         <LanguageToggle />
         <ColorModeButton />

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const colorMode = useColorMode()
-const { locale, t } = useI18n()
+const { locale } = useI18n()
 const localePath = useLocalePath()
 
 const color = computed(() => colorMode.value === 'dark' ? '#020618' : 'white')
@@ -71,12 +71,18 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
   })
 ])
 
+const { data: navData } = await useAsyncData('main-navigation', () => queryCollection('navigation').first())
+
 const navLinksComputed = computed(() => {
+  const contentLinks = navData.value?.links?.map(link => ({
+    label: locale.value === 'pl' && link.label_pl ? link.label_pl : link.label,
+    icon: link.icon,
+    to: localePath(link.to)
+  })) || []
+
   return [
-    { label: t('nav.home'), icon: 'i-lucide-home', to: localePath('/') },
-    { label: t('nav.projects'), icon: 'i-lucide-folder', to: localePath('/projects') },
-    { label: t('nav.blog'), icon: 'i-lucide-file-text', to: localePath('/blog') },
-    { label: t('nav.about'), icon: 'i-lucide-user', to: localePath('/about') }
+    { label: 'Logo', to: localePath('/'), isLogo: true },
+    ...contentLinks
   ]
 })
 </script>
