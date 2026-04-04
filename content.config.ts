@@ -183,6 +183,19 @@ export default defineContentConfig({
         content_pl: z.string().optional(),
         images: z.array(createImageSchema())
       })
+    }),
+    navigation: defineCollection({
+      type: 'data',
+      source: 'navigation.yml',
+      schema: z.object({
+        links: z.array(z.object({
+          id: z.string(),
+          label: z.string(),
+          label_pl: z.string().optional(),
+          icon: z.string().optional(),
+          to: z.string()
+        }))
+      })
     })
   }
 })

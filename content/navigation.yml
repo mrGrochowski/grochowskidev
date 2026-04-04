@@ -1,0 +1,21 @@
+links:
+  - id: home
+    label: Home
+    label_pl: Strona główna
+    icon: i-lucide-home
+    to: /
+  - id: projects
+    label: Projects
+    label_pl: Projekty
+    icon: i-lucide-folder
+    to: /projects
+  - id: blog
+    label: Blog
+    label_pl: Blog
+    icon: i-lucide-file-text
+    to: /blog
+  - id: about
+    label: About
+    label_pl: O mnie
+    icon: i-lucide-user
+    to: /about

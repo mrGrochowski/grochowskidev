@@ -150,7 +150,11 @@ useHead(() => ({
             :value="page"
           />
 
-          <div class="flex items-center justify-end gap-2 text-sm text-muted">
+          <AuthorBox
+            v-if="page.author"
+            :author="page.author"
+          />
+          <div class="flex items-center justify-end gap-2 text-sm text-muted mt-4">
             <UButton
               size="sm"
               variant="link"
