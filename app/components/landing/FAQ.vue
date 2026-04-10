@@ -21,6 +21,36 @@ const items = computed(() => {
   })
 })
 
+const faqStructuredData = computed(() => {
+  if (!items.value) return null
+
+  const mainEntity = items.value.flatMap(category =>
+    category.questions.map(q => ({
+      '@type': 'Question',
+      'name': q.label,
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': q.content
+      }
+    }))
+  )
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': mainEntity
+  }
+})
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(faqStructuredData.value)
+    }
+  ]
+})
+
 const ui = {
   root: 'flex items-center gap-4 w-full',
   list: 'relative flex bg-transparent dark:bg-transparent gap-2 px-0',

@@ -18,28 +18,6 @@ useSeoMeta({
   description: page.value?.seo?.description || (locale.value === 'pl' ? page.value?.description_pl : page.value?.description),
   ogDescription: page.value?.seo?.description || (locale.value === 'pl' ? page.value?.description_pl : page.value?.description)
 })
-
-const personStructuredData = computed(() => {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
-    'name': 'Mateusz Grochowski',
-    'url': 'https://grochowski.it',
-    'jobTitle': 'Software Engineer', // Or other appropriate title based on his profile
-    'sameAs': [
-      'https://www.linkedin.com/in/grochowski-it/'
-    ]
-  }
-})
-
-useHead({
-  script: [
-    {
-      type: 'application/ld+json',
-      innerHTML: JSON.stringify(personStructuredData.value)
-    }
-  ]
-})
 </script>
 
 <template>
@@ -54,5 +32,9 @@ useHead({
       <LandingWorkExperience :page />
     </UPageSection>
     <LandingBlog :page />
+    <LandingFAQ
+      v-if="page.faq"
+      :page
+    />
   </UPage>
 </template>

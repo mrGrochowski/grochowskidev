@@ -5,8 +5,47 @@ const localePath = useLocalePath()
 
 const color = computed(() => colorMode.value === 'dark' ? '#020618' : 'white')
 
+const personStructuredData = computed(() => ({
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  'name': 'Mateusz Grochowski',
+  'jobTitle': 'Frontend Developer',
+  'url': 'https://grochowski.it' + (locale.value === 'pl' ? '/pl/' : '/'),
+  'image': 'https://grochowski.it/hero/chrome-Gw3qknD8al.png',
+  'worksFor': {
+    '@type': 'Organization',
+    'name': 'Oferteo S.A.'
+  },
+  'alumniOf': [
+    {
+      '@type': 'Organization',
+      'name': 'Sii sp. z o.o.'
+    },
+    {
+      '@type': 'Organization',
+      'name': 'Divante S.A'
+    }
+  ],
+  'knowsAbout': [
+    'Nuxt.js',
+    'Vue.js',
+    'Frontend Development',
+    'Node.js',
+    'Medusa.js',
+    'Supabase'
+  ],
+  'sameAs': [
+    'https://github.com/mrGrochowski',
+    'https://www.linkedin.com/in/grochowski-it/'
+  ]
+}))
+
 useHead({
   script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(personStructuredData.value)
+    },
     {
       innerHTML: `
         window.dataLayer = window.dataLayer || [];
