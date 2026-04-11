@@ -30,8 +30,6 @@ export default defineNuxtConfig({
     '/__nuxt_studio/**': { prerender: false },
     '/__studio': { prerender: false },
     '/__studio/**': { prerender: false },
-    '/_studio': { prerender: false },
-    '/_studio/**': { prerender: false },
     '/**': { prerender: true }
   },
 
@@ -40,7 +38,8 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: [
-        '/'
+        '/',
+        '/_studio'
       ],
       crawlLinks: true
     }
